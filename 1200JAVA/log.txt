@@ -1,0 +1,3 @@
+the initial value of age is 18
+the initial value of gender is female
+merge these two variables to info, the result shoud be: this female should be 18 years old.
