@@ -1,13 +1,13 @@
 package Ticket;
 
 public class WalkupTicket extends Ticket{
-	private double price;
+	private int price;
 	
-	public WalkupTicket(int number) {
-		super(number);
-		price=50.0;
+	public WalkupTicket(int number, int days) {
+		super(number, days);
+		this.price = super.getPrice();
 	}
-	public double getPrice(){
+	public int getPrice(){
 		return price;
 	}
 	

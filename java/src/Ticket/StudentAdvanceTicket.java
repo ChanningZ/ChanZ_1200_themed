@@ -1,19 +1,15 @@
 package Ticket;
 
 public class StudentAdvanceTicket extends Ticket{
-	private double price;
-	private int days;
+	private int price;
+	
 	public StudentAdvanceTicket(int number,int days) {
-		super(number);
-		if(days >= 10){
-			price = 15;
-		}else if(days > 1&&days < 10){
-			price = 20; 
-		}else{
-			price = 25;
-		}
+		super(number,days);
+		this.price = (super.getPrice())/2;
 	}
-	public double getPrices() {
+	public int getPrice() {
 		return price;
 	}
+	
+	
 }
