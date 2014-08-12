@@ -1,16 +1,19 @@
 package Ticket;
 
 public class StudentAdvanceTicket extends Ticket{
-	private double prices;
-	public StudentAdvanceTicket(int number) {
+	private double price;
+	private int days;
+	public StudentAdvanceTicket(int number,int days) {
 		super(number);
-		setSAPrices(AdvanceTicket.getAdvanceTicketPrice()/2);
+		if(days >= 10){
+			price = 15;
+		}else if(days > 1&&days < 10){
+			price = 20; 
+		}else{
+			price = 25;
+		}
 	}
-	public double getSAPrices() {
-		return prices;
+	public double getPrices() {
+		return price;
 	}
-	public void setSAPrices(double prices) {
-		this.prices = prices;
-	}
-
 }
